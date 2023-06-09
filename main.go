@@ -13,6 +13,7 @@ func main() {
 		port = "8080"
 	}
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Cache-Control", "no-cache, no-store, must-revalidate")
 		fmt.Fprintf(w, "Hello, World!")
 	})
 	log.Printf("Server running on %s", port)
