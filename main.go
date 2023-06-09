@@ -16,5 +16,5 @@ func main() {
 		fmt.Fprintf(w, "Hello, World!")
 	})
 	log.Printf("Server running on %s", port)
-	http.ListenAndServe("0.0.0.0:"+port, nil)
+	http.ListenAndServe(":"+port, nil)
 }
